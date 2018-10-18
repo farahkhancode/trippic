@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../static/partials/head.ejs %>
+  </head>
+  <body>
+    <% include ../static/partials/navbar.ejs %>
+
+    <main class="container">
+
+      <h1>Edit Profile</h1>
+
+      <form action="/locations/<%= profile.locationId %>/profiles/<%= profile.id %>/update" method="post">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input value="<%= profile.username %>" type="text" class="form-control" name="username" aria-describedby="usernameHelp" placeholder="Enter Username">
+        </div>
+        <
+        <button type="submit" class="btn btn-primary">Update</button>
+      </form>
+    </main>
+
+    <% include ../static/partials/baseScripts.ejs %>
+
+  </body>
+</html>
