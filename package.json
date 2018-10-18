@@ -1,0 +1,19 @@
+{
+  "name": "trippic",
+  "version": "1.0.0",
+  "description": "A web application that helps individuals find photographers at their travel destinations.",
+  "main": "index.js",
+  "scripts": {
+    "test": "export NODE_ENV=test && jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/farahkhancode/trippic.git"
+  },
+  "author": "Farah Ahmed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/farahkhancode/trippic/issues"
+  },
+  "homepage": "https://github.com/farahkhancode/trippic#readme"
+}
