@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+ <% include ./partials/head.ejs %>
+  </head>
+  <body>
+
+   <% include ./partials/navbar.ejs %>
+
+      <!-- Page Content -->
+      <main class="container">
+
+<header class="jumbotron my-4">
+          <h1 class="display-3">Welcome to Tripic</h1>
+          <p class="lead">Find photographers at your travel destination by picking a location!</p>
+        <table>
+          <tr>
+            <td><form action="/locations/1" method="get">
+             <button type="submit" class="btn btn-primary">Rome, Italy</button>
+          </form></td>
+
+          <td><form action="/locations/2" method="get">
+             <button type="submit" class="btn btn-primary">London, UK</button>
+          </form></td>
+
+          <td><form action="/locations/3" method="get">
+             <button type="submit" class="btn btn-primary">Paris, France</button>
+          </form></td>
+
+          <td><form action="/locations/4" method="get">
+             <button type="submit" class="btn btn-primary">Hawaii, USA</button>
+          </form></td>
+        </tr>
+      </table>
+
+          <p class="lead">Have an eye for photography? Sign up and offer your services!</p>
+          <a href="/users/register" class="btn btn-primary btn-lg">Sign up</a>
+        </header>
+
+        <!-- Page Features -->
+        <section class="row text-center">
+
+          <section class="col-lg-4">
+            <h4 class="card-title">Destination</h4>
+            <p class="card-text">Search for photographers at your travel destination.</p>
+          </section>
+
+          <section class="col-lg-4">
+            <h4 class="card-title">Memories</h4>
+            <p class="card-text">Have someone capture your priceless memories!</p>
+          </section>
+
+          <section class="col-lg-4">
+            <h4 class="card-title">Make money!</h4>
+            <p class="card-text">Have an eye for photopgraphy? Become a travel photographer in your city!</p>
+          </section>
+
+        </section>
+        <!-- /.row -->
+
+      </main>
+      <!-- /.container -->
+
+    <% include ./partials/baseScripts.ejs %>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../static/partials/head.ejs %>
+  </head>
+  <body>
+    <main class="container">
+      <% include ../static/partials/navbar.ejs %>
+
+      <h1>Locations</h1>
+
+      <ul class="list-group">
+<!-- #1 -->
+        <% locations.forEach((location) => { %>
+<!-- #2 -->
+          <li class="list-group-item">
+            <a href="/locations/<%= location.id %>"> <%= location.name %> </a>
+          </li>
+        <% }) %>
+      </ul>
+
+    </main>
+  </body>
+</html>

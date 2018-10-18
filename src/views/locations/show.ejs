@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../static/partials/head.ejs %>
+  </head>
+  <body>
+    <% include ../static/partials/navbar.ejs %>
+
+    <main class="container">
+      <h1><%= location.name %></h1>
+      <form style="display:initial" action="/locations/<%= location.id %>/destroy" method="post">
+      <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+    <hr>
+
+  <h1>Photographers in this city</h1>
+
+  <ul class="list-group">
+    <% location.profiles.forEach((profile) => { %>
+      <li class="list-group-item">
+        <a href="/locations/<%= location.id %>/profiles/<%= profile.id %>"> <%= profile.username %> </a>
+      </li>
+    <% }) %>
+  </ul>
+    </main>
+
+    <% include ../static/partials/baseScripts.ejs %>
+
+  </body>
+</html>
