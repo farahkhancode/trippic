@@ -5,6 +5,10 @@ module.exports = (sequelize, DataTypes) => {
        type: DataTypes.STRING,
        allowNull: false
      },
+     avatar: {
+     type: DataTypes.STRING,
+     allowNull: false
+   },
      locationId: {
      type: DataTypes.INTEGER,
      allowNull: false

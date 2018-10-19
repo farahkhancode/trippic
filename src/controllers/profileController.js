@@ -7,6 +7,7 @@ module.exports = {
   create(req, res, next){
      let newProfile= {
        username: req.body.username,
+       avatar: req.body.avatar,
        locationId: req.params.locationId,
        userId: req.user.id,
      };

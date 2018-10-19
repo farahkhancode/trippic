@@ -15,9 +15,14 @@
        <a href="/locations/<%= profile.locationId %>/profiles/<%= profile.id %>/edit" class="btn btn-warning">Edit</a>
       <% } %>
 
-
-      <p><%= profile.username %></p>
-      
+      <div>
+      	<div>
+      			<h1><%= profile.username %></h1>
+      		<div class="thumbnail">
+      			<img  width="30%" height="30%" src="<%= profile.avatar %>" alt="user profile image">
+      		</div>
+      	</div>
+      </div>
 
 
 

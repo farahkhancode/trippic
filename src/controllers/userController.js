@@ -1,5 +1,5 @@
 const userQueries = require("../db/queries.users.js");
- const passport = require("passport");
+const passport = require("passport");
 
 module.exports = {
   register(req, res, next){
@@ -15,7 +15,7 @@ module.exports = {
          res.redirect("/users/signin");
        } else {
          req.flash("notice", "You've successfully signed in!");
-         res.redirect("/");
+         res.redirect("/locations");
        }
      })
    },
