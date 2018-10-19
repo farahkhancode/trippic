@@ -1,5 +1,6 @@
 const Location = require("./models").Location;
 const Profile = require("./models").Profile;
+const Authorizer = require("../policies/location");
 
 module.exports = {
 
@@ -46,15 +47,32 @@ module.exports = {
        })
      },
 
-   deleteLocation(id, callback){
-    return Location.destroy({
-      where: {id}
-    })
-    .then((location) => {
-      callback(null, location);
-    })
-    .catch((err) => {
-      callback(err);
-    })
-  }
+     deleteLocation(req, callback){
+
+     // #1
+         return Location.findById(req.params.id)
+         .then((location) => {
+
+     // #2
+           const authorized = new Authorizer(req.user, location).destroy();
+
+           if(authorized) {
+     // #3
+             location.destroy()
+             .then((res) => {
+               callback(null, location);
+             });
+
+           } else {
+
+     // #4
+             req.flash("notice", "You are not authorized to do that.")
+             callback(401);
+           }
+         })
+         .catch((err) => {
+           callback(err);
+         });
+       }
+
 }

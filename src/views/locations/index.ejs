@@ -9,6 +9,10 @@
 
       <h1>Locations</h1>
 
+      <% if(currentUser && currentUser.isAdmin()) { %>
+    <a href="/locations/new" class="btn btn-success">New Location</a>
+  <% } %>
+
       <ul class="list-group">
 <!-- #1 -->
         <% locations.forEach((location) => { %>

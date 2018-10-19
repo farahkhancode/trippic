@@ -7,12 +7,17 @@
     <% include ../static/partials/navbar.ejs %>
 
     <main class="container">
-      <form style="display:initial" action="/locations/<%= profile.locationId %>/profiles/<%= profile.id %>/destroy" method="post">
-      <button type="submit" class="btn btn-danger">Delete Profile</button>
 
+      <% if(currentUser) { %>
+      <form style="display:initial" action="/locations/<%= profile.locationId %>/profiles/<%= profile.id %>/destroy" method="post">
+      <button type="submit" class="btn btn-danger">Delete Profile</button
     </form>
+       <a href="/locations/<%= profile.locationId %>/profiles/<%= profile.id %>/edit" class="btn btn-warning">Edit</a>
+      <% } %>
+
+
       <p><%= profile.username %></p>
-      <a href="/locations/<%= profile.locationId %>/profiles/<%= profile.id %>/edit" class="btn btn-warning">Edit</a>
+      
 
 
 
