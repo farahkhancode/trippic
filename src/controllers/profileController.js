@@ -8,7 +8,7 @@ module.exports = {
      let newProfile= {
        username: req.body.username,
        locationId: req.params.locationId,
-       userId: req.user.id
+       userId: req.user.id,
      };
      profileQueries.addProfile(newProfile, (err, profile) => {
        if(err){
