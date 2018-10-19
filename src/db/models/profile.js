@@ -8,7 +8,23 @@ module.exports = (sequelize, DataTypes) => {
      avatar: {
      type: DataTypes.STRING,
      allowNull: false
-   },
+     },
+     pic1: {
+      type: DataTypes.STRING,
+      allowNull: false
+     },
+     pic2: {
+      type: DataTypes.STRING,
+      allowNull: false
+     },
+     pic3: {
+      type: DataTypes.STRING,
+      allowNull: false
+     },
+     pic4: {
+      type: DataTypes.STRING,
+      allowNull: false
+     },
      locationId: {
      type: DataTypes.INTEGER,
      allowNull: false

@@ -8,6 +8,10 @@ module.exports = {
      let newProfile= {
        username: req.body.username,
        avatar: req.body.avatar,
+       pic1: req.body.pic1,
+       pic2: req.body.pic2,
+       pic3: req.body.pic3,
+       pic4: req.body.pic4,
        locationId: req.params.locationId,
        userId: req.user.id,
      };
