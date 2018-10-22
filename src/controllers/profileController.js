@@ -13,7 +13,7 @@ module.exports = {
        pic3: req.body.pic3,
        pic4: req.body.pic4,
        locationId: req.params.locationId,
-       userId: req.user.id,
+       userId: req.user.id
      };
      profileQueries.addProfile(newProfile, (err, profile) => {
        if(err){

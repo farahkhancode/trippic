@@ -4,3 +4,29 @@ body {
 .lead{
   padding-top: 20px;
 }
+
+.thumbnails{
+  padding: 20px;
+  grid-row: 1 / span 4;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.buttons{
+  padding: 20px;
+  float: right
+}
+
+.username{
+  padding: 20px;
+}
