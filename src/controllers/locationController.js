@@ -24,7 +24,7 @@ new(req, res, next){
        res.redirect("/locations");
      }
    },
-
+   
 
    create(req, res, next){
 
