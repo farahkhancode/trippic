@@ -8,6 +8,8 @@ module.exports = {
      let newProfile= {
        username: req.body.username,
        avatar: req.body.avatar,
+       aboutMe:req.body.aboutMe,
+       link: req.body.link,
        pic1: req.body.pic1,
        pic2: req.body.pic2,
        pic3: req.body.pic3,
@@ -28,7 +30,7 @@ module.exports = {
       if(err || profile == null){
         res.redirect(404, "/");
       } else {
-        res.render("profiles/show", {profile});
+        res.render("profiles/show", { profile, user: req.user });
       }
     });
   },

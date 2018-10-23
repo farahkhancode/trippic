@@ -19,34 +19,47 @@
 
       <div>
       	<div>
+
           <div class="username">
       			<h1><%= profile.username %></h1>
+            <h3>Contact: <%= user.email %> </h3>
           </div>
 
 
-      		<div class="row">
+      		<div class="avatar">
       			<img  width="30%" height="30%" src="<%= profile.avatar %>" alt="profile picture">
       		</div>
 
+          <div class="aboutme">
+          <h4> About Me</h4>
+           <h6> <%= profile.aboutMe %></h6>
+          </div>
+
+          <a href="<%= profile.link %>" target="_blank">Portfolio</a>
+
+          <div class="row">
+          <h2>Portfolio</h2>
           <div>
           <div class="column">
-      			<img  width="40%" height="40%" src="<%= profile.pic1 %>" alt="sample image">
+      			<img  width="100%" height="100%" src="<%= profile.pic1 %>" alt="sample image">
       		</div>
 
           <div class="column">
-      			<img  width="40%" height="40%" src="<%= profile.pic2 %>" alt="sample image">
+      			<img  width="100%" height="100%"  src="<%= profile.pic2 %>" alt="sample image">
       		</div>
 
           <div class="column">
-      			<img  width="40%" height="40%" src="<%= profile.pic3 %>" alt="sample image">
+      			<img  width="100%" height="100%"  src="<%= profile.pic3 %>" alt="sample image">
       		</div>
 
           <div class="column">
-      			<img  width="40%" height="40%" src="<%= profile.pic4 %>" alt="sample image">
+      			<img  width="100%" height="100%"  src="<%= profile.pic4 %>" alt="sample image">
       		</div>
+
+        </div>
         </div>
       </div>
-    </div>
+
 
 
 

@@ -5,6 +5,12 @@ module.exports = (sequelize, DataTypes) => {
        type: DataTypes.STRING,
        allowNull: false
      },
+     aboutMe: {
+     type: DataTypes.STRING
+     },
+     link: {
+     type: DataTypes.STRING
+     },
      avatar: {
      type: DataTypes.STRING,
      allowNull: false
@@ -42,6 +48,8 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "userId",
         onDelete: "CASCADE"
       });
+
+
     // associations can be defined here
   };
   return Profile;
