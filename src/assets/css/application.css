@@ -11,6 +11,9 @@ body {
   padding-bottom: 80px;
 }
 
+#avatar{
+  padding-bottom:30px;
+}
 
 .column {
     float: left;
@@ -18,11 +21,22 @@ body {
     padding: 5px;
 }
 
+.portfolio{
+padding-top:20px;
+}
+
+.email{
+padding-top:20px;
+}
 /* Clearfix (clear floats) */
-.row{
+#row{
     padding-left: 10px;
     padding-top: 20px;
     display: table;
+}
+
+#profbtn {
+  float:right;
 }
 .buttons{
   padding: 20px;

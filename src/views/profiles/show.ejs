@@ -8,7 +8,7 @@
 
     <main class="container">
 
-      <% if(currentUser) { %>
+      <% if(currentUser && currentUser.id === profile.userId) { %>
       <div class="buttons">
         <form style="display:initial" action="/locations/<%= profile.locationId %>/profiles/<%= profile.id %>/destroy" method="post">
           <button type="submit" class="btn btn-danger">Delete Profile</button
@@ -22,23 +22,24 @@
 
           <div class="username">
       			<h1><%= profile.username %></h1>
-            <h3>Contact: <%= user.email %> </h3>
+          </div>
+        <hr>
+          <div class="row" id="rowp">
+      		 <div class="column" id="avatar">
+      			 <img  width="90%" height="90%" src="<%= profile.avatar %>" alt="profile picture">
+      		 </div>
+
+          <div class="column">
+          <h3> About Me </h3>
+           <h5> <%= profile.aboutMe %></h5>
+          <a class="portfolio" href="<%= profile.link %>" font-size="30px" target="_blank">View My Portfolio</a>
+          <h5 class="email"> <%= user.email %> </h5>
+          </div>
           </div>
 
-
-      		<div class="avatar">
-      			<img  width="30%" height="30%" src="<%= profile.avatar %>" alt="profile picture">
-      		</div>
-
-          <div class="aboutme">
-          <h4> About Me</h4>
-           <h6> <%= profile.aboutMe %></h6>
-          </div>
-
-          <a href="<%= profile.link %>" target="_blank">Portfolio</a>
-
-          <div class="row">
-          <h2>Portfolio</h2>
+          <hr>
+          <div class="row" id="rowp">
+          <h2>Sample Photos</h2>
           <div>
           <div class="column">
       			<img  width="100%" height="100%" src="<%= profile.pic1 %>" alt="sample image">
