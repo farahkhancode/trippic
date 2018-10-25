@@ -30,7 +30,7 @@ module.exports = {
       if(err || profile == null){
         res.redirect(404, "/");
       } else {
-        res.render("profiles/show", { profile, user: req.user });
+        res.render("profiles/show", { profile, user: profile.User , location:profile.Location });
       }
     });
   },

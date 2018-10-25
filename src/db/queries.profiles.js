@@ -1,5 +1,6 @@
 const Profile = require("./models").Profile;
 const Location = require("./models").Location;
+const User = require('./models').User;
 
 module.exports = {
   addProfile(newProfile, callback){
@@ -11,8 +12,12 @@ module.exports = {
           callback(err);
         })
       },
+
+
   getProfile(id, callback){
-     return Profile.findById(id)
+     return Profile.findById(id, {
+       include: [ { model: User }, { model: Location } ]
+     })
      .then((profile) => {
        callback(null, profile);
      })
@@ -20,6 +25,8 @@ module.exports = {
        callback(err);
      })
    },
+
+
    deleteProfile(id, callback){
      return Profile.destroy({
        where: { id }
